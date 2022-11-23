@@ -39,5 +39,29 @@
   align-items: flex-start;
 }
 
+.imagen__alto{
+  height: 250px;
+}
+
+.links{
+  text-decoration: none;
+
+}
+
+.productContainer{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.botonDetalle{
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  margin-left: 2.5rem;
+  background-color: #477463;
+  color: white;
+  border: none;
+  border-radius: .2rem;
+}
+
 
 
