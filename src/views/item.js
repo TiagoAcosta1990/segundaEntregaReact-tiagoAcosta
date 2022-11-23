@@ -1,3 +1,4 @@
+
 import ItemDetailContainer from "../components/ItemDetailContainer";
 import { Layout } from "../components/Layout";
 
@@ -10,3 +11,6 @@ const ItemView = () => {
 };
 
 export default ItemView;
+
+
+
