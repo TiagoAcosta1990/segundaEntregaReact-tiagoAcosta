@@ -11,7 +11,7 @@ import flor from "../assets/flor.png"
 import musicos from "../assets/musicos.png"
 import angel from "../assets/angel.png"
 
-export const item = [
+export const Items = [
     {
         id:"1",
         name: "Amigos Conversando",

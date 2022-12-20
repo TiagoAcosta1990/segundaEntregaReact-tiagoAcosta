@@ -1,11 +1,12 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 
+
 // Own components
 import ItemList from "./ItemList";
 
 // Mock
-import { item } from "../mocks/item.mock";
+import { Items } from "../mocks/item.mock";
 
 const ItemListContainer = () => {
   const { category } = useParams();
@@ -14,7 +15,7 @@ const ItemListContainer = () => {
   useEffect(() => {
     new Promise((resolve) =>
       setTimeout(() => {
-        resolve(item);
+        resolve(Items);
       }, 2000)
     ).then((data) => {
       if (category) {
@@ -33,8 +34,8 @@ const ItemListContainer = () => {
   }
 
   return (
-    <div className="h-full">
-      <ItemList products={products} />
+    <div className="h-full contenedorProductos">
+      <ItemList  products={products} />
     </div>
   );
 };
