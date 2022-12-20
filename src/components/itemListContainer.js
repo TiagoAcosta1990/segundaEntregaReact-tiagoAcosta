@@ -4,6 +4,7 @@ import { useParams } from "react-router-dom";
 
 // Own components
 import ItemList from "./ItemList";
+import { Loading } from "./Loading";
 
 // Mock
 import { Items } from "../mocks/item.mock";
@@ -13,11 +14,13 @@ const ItemListContainer = () => {
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
-    new Promise((resolve) =>
-      setTimeout(() => {
+    new Promise((resolve) =>{
+      setProducts([]);
+
+      return  setTimeout(() => {
         resolve(Items);
-      }, 2000)
-    ).then((data) => {
+      }, 2000);
+    }).then((data) => {
       if (category) {
         const categories = data.filter(
           (product) => product.category === category
@@ -30,9 +33,8 @@ const ItemListContainer = () => {
   }, [category]);
 
   if (products.length === 0) {
-    return <p>Loading...</p>;
-  }
-
+    return <Loading />;
+  }  
   return (
     <div className="h-full contenedorProductos">
       <ItemList  products={products} />
@@ -41,3 +43,6 @@ const ItemListContainer = () => {
 };
 
 export default ItemListContainer;
+  
+
+  

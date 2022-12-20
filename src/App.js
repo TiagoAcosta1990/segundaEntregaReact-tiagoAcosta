@@ -2,11 +2,8 @@
 import './App.css';
 import ItemListContainer from "./components/itemListContainer";
 import { Layout } from "./components/Layout";
-import Portada from './components/portada';
 import Banner from './components/banner';
-import Footer from './components/Footer';
-import FooterInferior from './components/FooterInferior';
-import { cartContext } from './context/cartContext';
+
 
 function App() {
   return (

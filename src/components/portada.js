@@ -5,7 +5,6 @@ import caroussel3 from "../assets/carouselChico.jpg"
 
 function Portada () {
     return(
-        <div>
             <Carousel fade>
       <Carousel.Item>
         <img
@@ -29,7 +28,7 @@ function Portada () {
         />
       </Carousel.Item>
     </Carousel>
-        </div>
+  
     )
 }
 
