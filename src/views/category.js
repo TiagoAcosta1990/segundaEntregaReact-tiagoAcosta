@@ -1,5 +1,5 @@
 
-import ItemListContainer from "../components/itemListContainer"
+import {ItemListContainer} from "../components/itemListContainer"
 import { Layout } from "../components/Layout";
 
 const CategoryView = () => {

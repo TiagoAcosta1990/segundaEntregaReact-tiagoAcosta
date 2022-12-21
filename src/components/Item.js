@@ -3,11 +3,14 @@ import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
+import { useGetItemImg } from "../hooks/useGetItemImg";
+import { Loading } from "./Loading";
 
 
 
 export const Item = ({ product, quantityAdded }) => {
   const navigate = useNavigate();
+  const img = useGetItemImg(product.img);
 
   const description = product.description.slice(0, 30);
   const title = product.name.slice(0, 20);
@@ -15,13 +18,16 @@ export const Item = ({ product, quantityAdded }) => {
   function handleNavigate() {
     navigate(`/item/${product.id}`);
   }
+
+  if (!img) {
+    return <Loading />;
+  }
+  
     return (
-      <div>
-        <div>
         <div onClick={handleNavigate} className='productoAlineacion py-3 my-3'>
                
                <Card style={{ width: '18rem',border: 'solid gold'}} className="carta">
-                 <Card.Img variant="top" className="imagen__alto" src={product.img} />
+                 <Card.Img variant="top" className="imagen__alto" src={img} />
                  <Card.Body>
                    <Card.Title>{product.name.length > 20 ? `${title} ...` : product.name}</Card.Title>
                    <Card.Text>
@@ -44,8 +50,7 @@ export const Item = ({ product, quantityAdded }) => {
              
                
              </div>       
-      </div>
-        </div>
+      
           
               
     );

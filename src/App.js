@@ -1,6 +1,6 @@
 
 import './App.css';
-import ItemListContainer from "./components/itemListContainer";
+import {ItemListContainer} from "./components/itemListContainer";
 import { Layout } from "./components/Layout";
 import Banner from './components/banner';
 
