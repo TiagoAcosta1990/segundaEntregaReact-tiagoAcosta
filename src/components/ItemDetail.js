@@ -2,8 +2,8 @@
 import { useContext, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { CartContext } from "../context/cartContext";
-import { ItemCount } from "./ItemCount";
 import { useGetItemImg } from "../hooks/useGetItemImg";
+import { ItemCount } from "./ItemCount";
 import { Loading } from "./Loading";
 
 const ItemDetail = ({ item }) => {
